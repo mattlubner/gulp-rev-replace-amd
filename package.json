@@ -1,9 +1,10 @@
 {
-  "name": "gulp-rev-replace",
-  "version": "0.3.1",
-  "description": "Rewrite occurences of filenames which have been renamed by gulp-rev",
+  "name": "gulp-rev-replace-amd",
+  "version": "0.0.1",
+  "description": "Rewrite occurences of filenames in amd js modules which have been renamed by gulp-rev",
   "main": "index.js",
-  "repository": "jamesknelson/gulp-rev-replace",
+  "repository": "mattlubner/gulp-rev-replace-amd",
+  "private": true,
   "scripts": {
     "test": "mocha"
   },
@@ -16,9 +17,9 @@
     "asset"
   ],
   "author": {
-    "name": "James K Nelson",
-    "email": "james@numbattech.com",
-    "url": "http://jamesknelson.com"
+    "name": "Matt Lubner",
+    "email": "matt@mattlubner.com",
+    "url": "http://mattlubner.com"
   },
   "engines": {
     "node": ">=0.10.0"
