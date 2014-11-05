@@ -83,7 +83,7 @@ Don't replace filenames in the replaceBasePath (no subpath).
 
 ## Todo
 
-[] Update test cases
+- [ ] Update test cases
 
 
 ## License
