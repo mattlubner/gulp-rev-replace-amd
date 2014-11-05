@@ -1,7 +1,7 @@
 {
   "name": "gulp-rev-replace-amd",
   "version": "0.0.1",
-  "description": "Rewrite occurences of filenames in amd js modules which have been renamed by gulp-rev",
+  "description": "Rewrite occurrences of RequireJS modules which have been renamed by gulp-rev",
   "main": "index.js",
   "repository": "mattlubner/gulp-rev-replace-amd",
   "private": true,
