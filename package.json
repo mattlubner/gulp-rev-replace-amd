@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Rewrite occurrences of RequireJS modules which have been renamed by gulp-rev",
   "main": "index.js",
-  "repository": "mattlubner/gulp-rev-replace-amd",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/mattlubner/gulp-rev-replace-amd.git"
+  },
   "private": true,
   "scripts": {
     "test": "mocha"
