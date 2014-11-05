@@ -81,6 +81,11 @@ Don't replace filenames in the replaceBasePath (no subpath).
 !! WARNING !! Be wary of disabling this setting, as it can significantly increase the likelihood of erroneous string replacements.
 
 
+## Todo
+
+[] Update test cases
+
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © [Matt Lubner](http://mattlubner.com/), [James K Nelson](http://jamesknelson.com/)
