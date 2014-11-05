@@ -18,16 +18,23 @@ $ npm install --save-dev gulp-rev-replace-amd
 Pipe through a stream which has both the files you want to be updated, as well as the files which have been renamed.
 
 ```js
+  var gulp = require('gulp');
+  var filter = require('gulp-filter');
+  var rev = require('gulp-rev');
+  var revReplaceAmd = require('gulp-rev-replace-amd');
+  var revFilter = filter('**/*.{js,hbs}');
   return gulp.src([
-      'app/**/*.{html,js,hbs}',
+      'app/**/*.{js,hbs,html}',
       '.tmp/**/*.*' // take care to NOT include directories !!
     ])
-    .pipe($.rev())
+    .pipe(revFilter)
+    .pipe(rev())
+    .pipe(revFilter.restore())
     // RJS assets need to be rev-replaced w/o .js extension
     .pipe(revReplaceAmd({
       replaceBasePath: 'assets' // <- set to 'require.config.baseUrl'
     }))
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest('dist'));
 });
 ```
 
