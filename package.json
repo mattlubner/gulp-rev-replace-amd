@@ -14,7 +14,10 @@
     "revision",
     "version",
     "replace",
-    "asset"
+    "asset",
+    "requirejs",
+    "amd",
+    "module"
   ],
   "author": {
     "name": "Matt Lubner",
