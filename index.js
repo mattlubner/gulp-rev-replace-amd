@@ -19,9 +19,10 @@ var plugin = function(options) {
 
     options = options || {};
 
-    options.debug                   = options.debug || false;
-    options.canonicalUris           = options.canonicalUris && true;
-    options.skipBaseFiles           = options.skipBaseFiles && true;
+    if ( typeof(options.debug) === 'undefined' ) options.debug = false;
+    if ( typeof(options.canonicalUris) === 'undefined' ) options.canonicalUris = true;
+    if ( typeof(options.skipBaseFiles) === 'undefined' ) options.skipBaseFiles = true;
+
     options.replaceBasePath         = options.replaceBasePath || '';
     options.replaceInExtensions     = options.replaceInExtensions || ['.js', '.html', '.hbs'];
     options.replaceSansExtensions   = options.replaceSansExtensions || ['.js'];
@@ -54,11 +55,11 @@ var plugin = function(options) {
             renames[fmtPath(file.revOrigBase + options.replaceBasePath, file.revOrigPath)] = fmtPath(file.base + options.replaceBasePath, file.path);
 
             // Also replace reved file references lacking certain extensions.
-            if (options.replaceSansExtensions.indexOf(path.extname(file.path)) > -1) {
+            if (options.replaceSansExtensions.indexOf(path.extname(file.path)) !== -1) {
 
                 revOrigBaseTruncated = fmtPath(file.revOrigBase + options.replaceBasePath, file.revOrigPath.replace(sansExt, ''));
 
-                if ( revOrigBaseTruncated.split('/').length > 1 ) {
+                if ( !options.skipBaseFiles || revOrigBaseTruncated.split('/').length > 1 ) {
                     baseTruncated = fmtPath(file.base + options.replaceBasePath, file.path.replace(sansExt, ''));
                     renames['\''+revOrigBaseTruncated+'\''] = '\''+baseTruncated+'\'';
                     renames['"'+revOrigBaseTruncated+'"'] = '"'+baseTruncated+'"';
