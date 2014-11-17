@@ -83,6 +83,7 @@ Don't replace filenames in the replaceBasePath (no subpath).
 
 ## Todo
 
+- [ ] Implement skipBaseFiles
 - [ ] Update test cases
 
 
