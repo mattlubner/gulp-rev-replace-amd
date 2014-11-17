@@ -1,6 +1,6 @@
 {
   "name": "gulp-rev-replace-amd",
-  "version": "0.3.1",
+  "version": "0.4.1",
   "description": "Rewrite occurrences of RequireJS modules which have been renamed by gulp-rev",
   "main": "index.js",
   "repository": {
